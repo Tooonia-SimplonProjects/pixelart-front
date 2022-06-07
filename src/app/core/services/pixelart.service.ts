@@ -63,7 +63,13 @@ public getAllPixelArtByUser(id: number): Observable<PixelartItem[]> {
  * @returns 
  */ 
   public add(pixelartModel: PixelartModel): Observable<PixelartModel> {
-    return this.http.post<PixelartModel>(`${this.basePath}/pixelart-create`, pixelartModel);
+
+
+    return this.http.post<PixelartModel>(`${this.basePath}/pixelart-create`, pixelartModel, {
+      headers: {
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjY2NAZ21haWwuY29tIiwiZXhwIjoxNjU0NzYxNTAwLCJpYXQiOjE2NTQ2NDE1MDB9.50h1WJsPQf1zAQjyiaG9EcWhhZ3411hjsTORXzMLhOs',
+      }
+    });
   }
   // TODO: This is with the interface:
   // public add(pixelartItem: PixelartItem): Observable<PixelartItem> {
