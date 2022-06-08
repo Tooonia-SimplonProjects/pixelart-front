@@ -63,8 +63,6 @@ public getAllPixelArtByUser(id: number): Observable<PixelartItem[]> {
  * @returns 
  */ 
   public add(pixelartModel: PixelartModel): Observable<PixelartModel> {
-
-
     return this.http.post<PixelartModel>(`${this.basePath}/pixelart-create`, pixelartModel, {
       headers: {
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjY2NAZ21haWwuY29tIiwiZXhwIjoxNjU0NzYxNTAwLCJpYXQiOjE2NTQ2NDE1MDB9.50h1WJsPQf1zAQjyiaG9EcWhhZ3411hjsTORXzMLhOs',
@@ -78,7 +76,11 @@ public getAllPixelArtByUser(id: number): Observable<PixelartItem[]> {
 
   // UPDATE pixelart by id
   public update(pixelartItem: PixelartItem): Observable<PixelartItem> {
-    return this.http.put<PixelartItem>(`${this.basePath}/pixelart-edit/${pixelartItem.id}`, pixelartItem);
+    return this.http.put<PixelartItem>(`${this.basePath}/pixelart-edit/${pixelartItem.id}`, pixelartItem, {
+      headers: {
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjY2NAZ21haWwuY29tIiwiZXhwIjoxNjU0NzYxNTAwLCJpYXQiOjE2NTQ2NDE1MDB9.50h1WJsPQf1zAQjyiaG9EcWhhZ3411hjsTORXzMLhOs',
+      }
+    });
 // public update(pixelartItem: PixelartItem, pixelartId: Number): Observable<PixelartItem> {
     // return this.http.put<PixelartItem>(`${this.basePath}/pixelart`, pixelartItem);
   }
@@ -86,7 +88,11 @@ public getAllPixelArtByUser(id: number): Observable<PixelartItem[]> {
   // DELETE pixelart by id
   // TODO: why <any> for Observable here?:
   public deleteById(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.basePath}/pixelart-edit/${id}`);
+    return this.http.delete<any>(`${this.basePath}/pixelart-edit/${id}`, {
+      headers: {
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjY2NAZ21haWwuY29tIiwiZXhwIjoxNjU0NzYxNTAwLCJpYXQiOjE2NTQ2NDE1MDB9.50h1WJsPQf1zAQjyiaG9EcWhhZ3411hjsTORXzMLhOs',
+      }
+    });
     // return this.http.delete(`${this.basePath}/pixelart/${id}`, {
     //   responseType: 'json',
     // });
