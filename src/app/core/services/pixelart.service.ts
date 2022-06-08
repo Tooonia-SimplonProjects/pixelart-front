@@ -65,7 +65,7 @@ public getAllPixelArtByUser(id: number): Observable<PixelartItem[]> {
   public add(pixelartModel: PixelartModel): Observable<PixelartModel> {
     return this.http.post<PixelartModel>(`${this.basePath}/pixelart-create`, pixelartModel, {
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjY2NAZ21haWwuY29tIiwiZXhwIjoxNjU0NzYxNTAwLCJpYXQiOjE2NTQ2NDE1MDB9.50h1WJsPQf1zAQjyiaG9EcWhhZ3411hjsTORXzMLhOs',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjU0NzkyNTM1LCJpYXQiOjE2NTQ2NzI1MzV9.VSPlNaQOrFGaIrGSEej_HzoxWU3CnBIOReKO7z_NNao',
       }
     });
   }
@@ -78,7 +78,7 @@ public getAllPixelArtByUser(id: number): Observable<PixelartItem[]> {
   public update(pixelartItem: PixelartItem): Observable<PixelartItem> {
     return this.http.put<PixelartItem>(`${this.basePath}/pixelart-edit/${pixelartItem.id}`, pixelartItem, {
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjY2NAZ21haWwuY29tIiwiZXhwIjoxNjU0NzYxNTAwLCJpYXQiOjE2NTQ2NDE1MDB9.50h1WJsPQf1zAQjyiaG9EcWhhZ3411hjsTORXzMLhOs',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjU0NzkyNTM1LCJpYXQiOjE2NTQ2NzI1MzV9.VSPlNaQOrFGaIrGSEej_HzoxWU3CnBIOReKO7z_NNao',
       }
     });
 // public update(pixelartItem: PixelartItem, pixelartId: Number): Observable<PixelartItem> {
@@ -90,7 +90,7 @@ public getAllPixelArtByUser(id: number): Observable<PixelartItem[]> {
   public deleteById(id: number): Observable<any> {
     return this.http.delete<any>(`${this.basePath}/pixelart-edit/${id}`, {
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjY2NAZ21haWwuY29tIiwiZXhwIjoxNjU0NzYxNTAwLCJpYXQiOjE2NTQ2NDE1MDB9.50h1WJsPQf1zAQjyiaG9EcWhhZ3411hjsTORXzMLhOs',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjU0NzkyNTM1LCJpYXQiOjE2NTQ2NzI1MzV9.VSPlNaQOrFGaIrGSEej_HzoxWU3CnBIOReKO7z_NNao',
       }
     });
     // return this.http.delete(`${this.basePath}/pixelart/${id}`, {

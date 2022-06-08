@@ -50,7 +50,12 @@ export class UserService {
     return this.http.get((`${this.basePath}/pixelart-create`), { responseType: 'json'});
   }
 
-  // public deleteAccount(): Observable<any> {
-  //   return this.http.delete<any>(`${this.basePath}/my-profile/${uuid}`);
-  // }
+  public deleteAccount(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.basePath}/my-profile/${id}`, {
+      headers: {
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjU0NzkyNTM1LCJpYXQiOjE2NTQ2NzI1MzV9.VSPlNaQOrFGaIrGSEej_HzoxWU3CnBIOReKO7z_NNao',
+      }
+    });
+    // this.http.delete<any>(`${this.basePath}/my-profile/${id}`);
+  }
 }
