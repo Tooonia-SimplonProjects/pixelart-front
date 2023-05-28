@@ -85,7 +85,7 @@ export class PixelartService {
       responseType: 'json',
       // When we had the Bearer token problem previously, we managed to test methods by typing token value here:
       // headers: {
-      //   'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBnbWFpbC5jb20iLCJleHAiOjE2NzY3Njk0NzQsImlhdCI6MTY3NjY0OTQ3NH0.pXV-WBVLFbOo7pzsxNiEhakRkPpS1YGcv481kvMUPt4',
+      //   'Authorization': 'Bearer tokenToInsertHereEnDur',
       // }
     });
   }
